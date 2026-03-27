@@ -1,0 +1,19 @@
+.btn-container {
+  position: relative;
+}
+
+.text {
+  color: var(--neutro-neutral-250);
+}
+
+.text.active {
+  color: var(--neutro-neutral-400);
+}
+
+.active-divisor {
+  border: 2px solid var(--neutro-neutral-500);
+  position: absolute;
+  top: 2.9rem;
+  left: 0;
+  right: 0;
+}

@@ -2,7 +2,12 @@
 export interface InfoModel{
   title: string;
   date: string;
-  status: 'pending' | 'upcoming' | 'completed';
+  status: 'Behind Schedule' | 'upcoming' | 'completed';
+}
+
+export interface infoHeader{
+  title: string;
+  status: 'active' | 'disabled'
 }
 
 

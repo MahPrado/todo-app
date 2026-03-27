@@ -26,7 +26,11 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/assets/colors.scss",
+              "src/assets/fonts.scss",
+              "src/assest/forms.scss",
+              "src/assets/reset.scss",
+              "src/assets/typografia.scss"
             ],
             "server": "src/main.server.ts",
             "outputMode": "server",

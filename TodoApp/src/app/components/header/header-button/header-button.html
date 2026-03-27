@@ -1,0 +1,9 @@
+<button class="btn-reset btn-container" (click)="redirectTo()">
+  <p class="typography-body-1-medium text" [class.active]="isActive">
+  {{ btnText }}
+  </p>
+
+  @if (isActive) {
+    <hr class="active-divisor">
+  }
+</button>

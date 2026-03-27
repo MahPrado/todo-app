@@ -1,0 +1,15 @@
+<div>
+  <img src="/images/todoIcon.svg" alt="ToDo App Icon">
+
+  <div class="nav-options">
+    @for (navBtn of pages; track navBtn.name) {
+      <app-header-button
+        [btnText]="navBtn.name"
+        [isActive]="navBtn.route === router.url"
+        (redirectRouteEvent)="redirectTo(navBtn.route)"
+      />
+    }
+  </div>
+
+  <hr class="divisor">
+</div>
