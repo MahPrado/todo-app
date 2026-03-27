@@ -8,8 +8,7 @@ import { HeaderButton } from './header-button/header-button';
 // Define que essa classe é um componente Angular
 @Component({
   selector: 'app-header',
-  // Diz que esse componente é independente (não usa módulo)
-  standalone: true,
+  standalone:true,
   imports: [HeaderButton],
   templateUrl: './header.html',
   styleUrl: './header.scss',

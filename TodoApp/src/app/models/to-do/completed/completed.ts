@@ -4,6 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-completed',
   imports: [],
   templateUrl: './completed.html',
-  styleUrl: './completed.css',
+  styleUrl: './completed.scss',
 })
 export class Completed {}

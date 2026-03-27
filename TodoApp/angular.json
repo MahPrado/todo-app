@@ -9,7 +9,8 @@
   "projects": {
     "TodoApp": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {"@schematics/angular:component": {
+    "style": "scss"}},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -28,9 +29,9 @@
             "styles": [
               "src/assets/colors.scss",
               "src/assets/fonts.scss",
-              "src/assest/forms.scss",
+              "src/assets/forms.scss",
               "src/assets/reset.scss",
-              "src/assets/typografia.scss"
+              "src/assets/typography.scss"
             ],
             "server": "src/main.server.ts",
             "outputMode": "server",

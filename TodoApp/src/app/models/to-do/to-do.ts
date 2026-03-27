@@ -4,6 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-to-do',
   imports: [],
   templateUrl: './to-do.html',
-  styleUrl: './to-do.css',
+  styleUrl: './to-do.scss',
 })
 export class ToDo {}

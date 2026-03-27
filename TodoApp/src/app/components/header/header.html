@@ -3,12 +3,13 @@
 
   <div class="nav-options">
     @for (navBtn of pages; track navBtn.name) {
-      <app-header-button
-        [btnText]="navBtn.name"
-        [isActive]="navBtn.route === router.url"
-        (redirectRouteEvent)="redirectTo(navBtn.route)"
-      />
+      <app-header-button 
+    
+      />/>
     }
+
+
+  
   </div>
 
   <hr class="divisor">

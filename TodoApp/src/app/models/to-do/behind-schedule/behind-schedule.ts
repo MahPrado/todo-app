@@ -4,6 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-behind-schedule',
   imports: [],
   templateUrl: './behind-schedule.html',
-  styleUrl: './behind-schedule.css',
+  styleUrl: './behind-schedule.scss',
 })
 export class BehindSchedule {}

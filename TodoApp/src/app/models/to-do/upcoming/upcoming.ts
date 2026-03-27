@@ -4,6 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-upcoming',
   imports: [],
   templateUrl: './upcoming.html',
-  styleUrl: './upcoming.css',
+  styleUrl: './upcoming.scss',
 })
 export class Upcoming {}
