@@ -2,15 +2,42 @@
   <img src="/images/todoIcon.svg" alt="ToDo App Icon">
 
   <div class="nav-options">
-    @for (navBtn of pages; track navBtn.name) {
+
+     <!-- 
+      @for = nova forma de loop do Angular (substitui o *ngFor antigo)
+      
+      headerBtn of pages: percorre a lista pages que vem do arquivo .ts
+      Cada item da lista será chamado de headerBtn
+
+      headerBtn.name:ajuda o Angular a identificar cada item
+    -->
+    @for (headerBtn of pages; track headerBtn.name) {
+      
+        <!-- 
+          [btnText] = envia um valor para o componente filho
+          Aqui estamos passando o nome do botão 
+        -->
+
+         <!-- 
+          [isActive] = envia true ou false
+          se a rota atual (router.url) é igual à rota do botão
+          Se for igual = true
+          Se não = false
+        -->
+
+        
+        <!-- 
+          (redirectRouteEvent): escuta um evento vindo do componente filho
+          Quando o botão for clicado, ele dispara esse evento, aí chamamos a função "redirectTo()" passando a rota
+        -->
+      
       <app-header-button 
-    
-      />/>
-    }
-
-
+      [btnText]="headerBtn.name"
+      [isActive]="headerBtn.route === router.url"
+      (redirectRouteEvent)="redirectTo(headerBtn.route)"
+      />    }
+       
   
   </div>
-
-  <hr class="divisor">
+  <hr class="linha">
 </div>

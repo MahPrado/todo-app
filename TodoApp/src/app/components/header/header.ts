@@ -8,14 +8,12 @@ import { HeaderButton } from './header-button/header-button';
 // Define que essa classe é um componente Angular
 @Component({
   selector: 'app-header',
-  standalone:true,
   imports: [HeaderButton],
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })
 
 export class Header {
-
   // Injeta o serviço de rotas do Angular para permitir navegação
   router = inject(Router);
 

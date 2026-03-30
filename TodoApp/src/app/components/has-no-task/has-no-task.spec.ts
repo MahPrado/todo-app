@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ProfileCard } from './profile-card';
+import { HasNoTask } from './has-no-task';
 
-describe('ProfileCard', () => {
-  let component: ProfileCard;
-  let fixture: ComponentFixture<ProfileCard>;
+describe('HasNoTask', () => {
+  let component: HasNoTask;
+  let fixture: ComponentFixture<HasNoTask>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ProfileCard],
+      imports: [HasNoTask],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(ProfileCard);
+    fixture = TestBed.createComponent(HasNoTask);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });
