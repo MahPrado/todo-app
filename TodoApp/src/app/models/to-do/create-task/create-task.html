@@ -1,0 +1,26 @@
+<div class="overlay" (click)="closeModal()"></div>
+
+<div class="modal">
+  <h2>Criar Task</h2>
+
+  <form (ngSubmit)="createTask()">
+    <input
+      type="text"
+      placeholder="Título"
+      [(ngMode)]="task.title"
+      name="title"
+      required
+    />
+
+    <textarea
+      placeholder="Descrição"
+      [(ngModel)]="task.description"
+      name="description"
+    ></textarea>
+
+    <div class="actions">
+      <button type="button" (click)="closeModal()">Cancelar</button>
+      <button type="submit">Criar</button>
+    </div>
+  </form>
+</div>

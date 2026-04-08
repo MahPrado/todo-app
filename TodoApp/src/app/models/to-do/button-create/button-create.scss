@@ -1,0 +1,8 @@
+.create-image {
+  width: 50px;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
