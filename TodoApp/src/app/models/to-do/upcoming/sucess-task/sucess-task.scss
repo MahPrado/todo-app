@@ -1,0 +1,29 @@
+.modal {
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  h3 {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-right: 1rem;
+  }
+  button {
+    padding: 0.5rem 1rem;
+    background: #17a2b8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    
+    &:hover {
+      background: #138496;
+    }
+  }
+}

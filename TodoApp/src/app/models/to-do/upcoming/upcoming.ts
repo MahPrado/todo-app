@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-import { HasNoTask } from "../../../components/has-no-task/has-no-task";
-import { ButtonCreate } from "../button-create/button-create";
+import { ButtonCreate } from "./button-create/button-create";
 
 @Component({
   selector: 'app-upcoming',
-  imports: [HasNoTask, ButtonCreate],
+  imports: [ ButtonCreate],
   templateUrl: './upcoming.html',
   styleUrl: './upcoming.scss',
 })
