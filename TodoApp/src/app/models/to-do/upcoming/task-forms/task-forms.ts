@@ -1,5 +1,6 @@
-import { Component, inject, Input } from '@angular/core';
+import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+
 
 @Component({
   selector: 'app-task-forms',
@@ -8,6 +9,9 @@ import { FormBuilder } from '@angular/forms';
 })
 
 export class TaskForms {
+
+  @Output() creaTask = new EventEmitter<void>();
+
   @Input() FormTitle: string = 'Create a Task';
   @Input() FormBtnTxt: string = 'Create Task';
   taskTitle: string = '';
@@ -22,7 +26,8 @@ export class TaskForms {
   });
 
   submitForm() {
-    // lógica para criar uma tarefa
     console.log('Task created:', this.taskTitle, this.taskDate);
+    this.creaTask.emit();
   }
+
 }

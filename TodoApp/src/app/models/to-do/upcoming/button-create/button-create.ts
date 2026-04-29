@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-button-create',
@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
 })
 
 export class ButtonCreate {
+
+  @Output() showForm = new EventEmitter<void>();
 
   isModalOpen = false;
   tasks: any[] = [];
@@ -24,4 +26,13 @@ export class ButtonCreate {
     console.log('Recebido do modal:', task);
     this.tasks.push(task);
   }
+
+   openTaskForms() {
+    this.showForm.emit();
+  }
+
+
 }
+
+
+

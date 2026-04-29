@@ -1,6 +1,7 @@
 
 import { Routes } from '@angular/router';
 
+
 // Aqui você define todas as rotas do seu app
 export const routes: Routes = [
   {
@@ -47,3 +48,5 @@ export const routes: Routes = [
     ]
   }
 ];
+
+
