@@ -2,7 +2,10 @@
 <div>
   <h2>{{FormTitle}}</h2>
   <input formControlName="title" placeholder="Task Title">
-  <input class="dat" formControlName="startDate" type="date" placeholder="Start Time">
-  <input class="dat" formControlName="endDate" type="date" placeholder="End Time">
+  
+  <div class="linha">
+    <input class="dat" formControlName="startDate" placeholder="Start Time">
+    <input class="dat" formControlName="endDate" placeholder="End Time">
+  </div>
   <button (click)="submitForm()"> {{FormBtnTxt}}</button>
 </div>
