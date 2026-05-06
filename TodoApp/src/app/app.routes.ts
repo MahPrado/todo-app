@@ -1,5 +1,5 @@
 
-import { Routes } from '@angular/router';
+import {  Routes } from '@angular/router';
 
 
 // Aqui você define todas as rotas do seu app
