@@ -1,5 +1,5 @@
 import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @Component({
@@ -10,12 +10,10 @@ import { FormBuilder } from '@angular/forms';
 
 export class TaskForms {
 
-  @Output() creaTask = new EventEmitter<void>();
+  @Output() creaTask = new EventEmitter<any>();
 
   @Input() FormTitle: string = 'Create a Task';
   @Input() FormBtnTxt: string = 'Create Task';
-  taskTitle: string = '';
-  taskDate: string = '';
 
   private formBuilder = inject(FormBuilder);
 
@@ -26,8 +24,17 @@ export class TaskForms {
   });
 
   submitForm() {
-    console.log('Task created:', this.taskTitle, this.taskDate);
-    this.creaTask.emit();
-  }
 
+    const novaTarefa = {
+      title: this.taskForm.value.title,
+      startDate: this.taskForm.value.startDate,
+      endDate: this.taskForm.value.endDate
+    };
+
+    console.log(novaTarefa);
+
+    this.creaTask.emit(novaTarefa);
+
+    this.taskForm.reset();
+  }
 }

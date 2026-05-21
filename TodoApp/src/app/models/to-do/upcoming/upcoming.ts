@@ -42,4 +42,10 @@ export class Upcoming {
     this.creaTask = false;
 }
 
+tarefas: any[] = [];
+
+adicionarTarefa(tarefa: any) {
+  this.tarefas.push(tarefa);
+}
+
 }

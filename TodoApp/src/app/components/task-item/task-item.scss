@@ -1,0 +1,19 @@
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid var(--neutro-neutral-800);
+    border-radius: 5px;
+}
+
+h3{
+    margin: 0;
+    font-size: 18px;
+    color: var(--neutro-neutral-250);
+}
+
+p{
+    margin: 0;
+    font-size: 10px;
+}
