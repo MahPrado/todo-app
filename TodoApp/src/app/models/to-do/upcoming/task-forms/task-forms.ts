@@ -1,9 +1,10 @@
 import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
-import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 
 
 @Component({
   selector: 'app-task-forms',
+  imports: [ReactiveFormsModule],
   templateUrl: './task-forms.html',
   styleUrls: ['./task-forms.scss']
 })

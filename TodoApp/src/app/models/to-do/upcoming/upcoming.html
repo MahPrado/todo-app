@@ -1,3 +1,5 @@
+<app-task-item/>
+
 @if (!showForm && !creaTask && !sucessModal) {
 <p>You have no schedule yet. Click on + to create a new Task</p>
 }
@@ -12,14 +14,6 @@
 @if (creaTask) {
     <app-sucess-task (sucessModal)="closeModal()"></app-sucess-task>
 }
-
-<app-task-forms
-  (creaTask)="adicionarTarefa($event)">
-</app-task-forms>
-
- <!--app-task-item
- [task]="task" 
-</app-task-item-->
 
 
 

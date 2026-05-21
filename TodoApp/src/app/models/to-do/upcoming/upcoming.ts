@@ -2,11 +2,13 @@ import { Component } from '@angular/core';
 import { ButtonCreate } from "./button-create/button-create";
 import { TaskForms } from "./task-forms/task-forms";
 import { SucessTask } from "./sucess-task/sucess-task";
+import { TaskItem } from "../../../components/task-item/task-item";
+
 
 
 @Component({
   selector: 'app-upcoming',
-  imports: [ButtonCreate, TaskForms, SucessTask],
+  imports: [ButtonCreate, TaskForms, SucessTask, TaskItem],
   templateUrl: './upcoming.html',
   styleUrl: './upcoming.scss',
 })
@@ -40,12 +42,6 @@ export class Upcoming {
   closeModal() {
     this.toggleSuc();
     this.creaTask = false;
-}
-
-tarefas: any[] = [];
-
-adicionarTarefa(tarefa: any) {
-  this.tarefas.push(tarefa);
 }
 
 }

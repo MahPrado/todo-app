@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import  Mock from '../../../../public/mock.json';
 
 @Component({
   selector: 'app-task-item',
@@ -8,7 +9,7 @@ import { Component } from '@angular/core';
 
 export class TaskItem {
 
-  task: any[] = [];
+@Input() task: any = Mock.tasks[0];
 
  
 } 
