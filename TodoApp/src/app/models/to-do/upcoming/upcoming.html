@@ -1,6 +1,6 @@
 <app-task-item/>
 
-@if (!showForm && !creaTask && !sucessModal) {
+@if (!showForm && !creaTask && !sucessModal && tasks.length === 0) {
 <p>You have no schedule yet. Click on + to create a new Task</p>
 }
 @if (!showForm && !creaTask) {

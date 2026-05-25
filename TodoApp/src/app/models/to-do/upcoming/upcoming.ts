@@ -44,4 +44,9 @@ export class Upcoming {
     this.creaTask = false;
 }
 
+tasks: any[] = [];
+//adicionarTarefa(task: any) {
+ // this.tasks.push(task);
+ // console.log(this.tasks);  }
+
 }
