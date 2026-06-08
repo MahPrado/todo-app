@@ -3,8 +3,7 @@ import { ButtonCreate } from "./button-create/button-create";
 import { TaskForms } from "./task-forms/task-forms";
 import { SucessTask } from "./sucess-task/sucess-task";
 import { TaskItem } from "../../../components/task-item/task-item";
-
-
+import { mock } from 'node:test';
 
 @Component({
   selector: 'app-upcoming',
@@ -44,7 +43,7 @@ export class Upcoming {
     this.creaTask = false;
 }
 
-tasks: any[] = [];
+lisTasks: any[] = [];
 //adicionarTarefa(task: any) {
  // this.tasks.push(task);
  // console.log(this.tasks);  }

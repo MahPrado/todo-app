@@ -1,7 +1,10 @@
-<app-task-item/>
 
-@if (!showForm && !creaTask && !sucessModal && tasks.length === 0) {
+
+@if (!showForm && !creaTask && !sucessModal && lisTasks.length === 0) {
 <p>You have no schedule yet. Click on + to create a new Task</p>
+}
+@else {
+ <app-task-item/>
 }
 @if (!showForm && !creaTask) {
     <app-button-create (showForm)="openTaskForm()"></app-button-create>
@@ -14,6 +17,7 @@
 @if (creaTask) {
     <app-sucess-task (sucessModal)="closeModal()"></app-sucess-task>
 }
+
 
 
 
