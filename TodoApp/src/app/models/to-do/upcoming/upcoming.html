@@ -1,11 +1,19 @@
 
-
 @if (!showForm && !creaTask && !sucessModal && lisTasks.length === 0) {
 <p>You have no schedule yet. Click on + to create a new Task</p>
 }
+
 @else {
  <app-task-item/>
 }
+
+<!--
+@if (lisTasks.length > 0) {
+  @for (task of lisTasks; track task.id) {
+    <app-task-item [task]="task"></app-task-item>
+  }
+}-->
+
 @if (!showForm && !creaTask) {
     <app-button-create (showForm)="openTaskForm()"></app-button-create>
 }

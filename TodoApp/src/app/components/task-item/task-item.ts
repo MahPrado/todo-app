@@ -12,4 +12,5 @@ export class TaskItem {
 @Input() task: any = Mock.tasks[0];
 
  
+
 } 
