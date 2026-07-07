@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import  Mock from '../../../../public/mock.json';
 
+
 @Component({
   selector: 'app-task-item',
   templateUrl: './task-item.html',
