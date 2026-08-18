@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { ButtonCreate } from "./button-create/button-create";
 import { TaskForms } from "./task-forms/task-forms";
 import { SucessTask } from "./sucess-task/sucess-task";
@@ -6,7 +7,7 @@ import { TaskItem } from "../../../components/task-item/task-item";
 
 @Component({
   selector: 'app-upcoming',
-  imports: [ButtonCreate, TaskForms, SucessTask, TaskItem],
+  imports: [CommonModule, ButtonCreate, TaskForms, SucessTask, TaskItem],
   templateUrl: './upcoming.html',
   styleUrl: './upcoming.scss',
 })
@@ -42,9 +43,26 @@ export class Upcoming {
     this.creaTask = false;
 }
 
+
+
 lisTasks: any[] = [];
 //adicionarTarefa(task: any) {
  // this.tasks.push(task);
  // console.log(this.tasks);  }
 
-}
+
+ 
+verificarStatus(task: any): string {
+  const hoje = new Date();
+  const dataFinal = new Date(task.endDate);
+
+  if (task.concluido) {
+    return 'concluido';
+  }
+
+  if (dataFinal < hoje) {
+    return 'atrasado';
+  }
+
+  return 'pendente';
+}}
