@@ -49,20 +49,17 @@ lisTasks: any[] = [];
 //adicionarTarefa(task: any) {
  // this.tasks.push(task);
  // console.log(this.tasks);  }
-
-
  
 verificarStatus(task: any): string {
   const hoje = new Date();
   const dataFinal = new Date(task.endDate);
 
   if (task.concluido) {
-    return 'concluido';
+    return 'completed';
   }
 
   if (dataFinal < hoje) {
-    return 'atrasado';
+    return 'behind-schedule';
   }
-
-  return 'pendente';
+  return 'upcoming';
 }}
