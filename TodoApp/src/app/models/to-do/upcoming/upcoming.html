@@ -3,25 +3,12 @@
 <p>You have no schedule yet. Click on + to create a new Task</p>
 }
 
-@else {
- <app-task-item/>
+@if (lisTasks.length > 0) {
+  <div *ngFor="let task of lisTasks; let i = index">
+    <app-task-item *ngIf="verificarStatus(task) === 'pendente'" [task]="task"></app-task-item>
+  </div>
 }
 
-<!--
-@if (lisTasks.length > 0) {
-  @for (task of lisTasks; track task.id) {
-    <app-task-item [task]="task"></app-task-item>
-  }
-}-->
-
-<div *ngFor="let task of lisTasks; let i = index">
-
-  <div *ngIf="verificarStatus(task) === 'pendente'">
-    <h3>{{ task.titulo }}</h3>
-    <p>Pendente</p>
-  </div>
-
-</div>
 
 @if (!showForm && !creaTask) {
     <app-button-create (showForm)="openTaskForm()"></app-button-create>

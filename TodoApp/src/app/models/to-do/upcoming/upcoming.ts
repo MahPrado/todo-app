@@ -11,7 +11,7 @@ import { TaskItem } from "../../../components/task-item/task-item";
   templateUrl: './upcoming.html',
   styleUrl: './upcoming.scss',
 })
-export class Upcoming {
+export class Upcoming{
 
   showForm = false;
   toggleForm() {
@@ -21,7 +21,6 @@ export class Upcoming {
   openTaskForm() {
     this.toggleForm();
 }
-
 
   creaTask = false;
   toggleSucess() {
@@ -43,20 +42,17 @@ export class Upcoming {
     this.creaTask = false;
 }
 
+lisTasks: any[] = [
+  //{ id: 1, title: 'Mock Task', startDate: '2024-07-01', endDate: '2024-06-01', completed: false },
+  //{ id: 2, title: 'Mock Task', startDate: '2024-08-01', endDate: '2024-06-01', completed: false },
+  //{ id: 3, title: 'Mock Task', startDate: '2024-05-01', endDate: '2024-04-01', completed: true }
+];
 
-
-lisTasks: any[] = [];
-//adicionarTarefa(task: any) {
- // this.tasks.push(task);
- // console.log(this.tasks);  }
-
-
- 
 verificarStatus(task: any): string {
   const hoje = new Date();
   const dataFinal = new Date(task.endDate);
 
-  if (task.concluido) {
+  if (task.completed) {
     return 'concluido';
   }
 
@@ -65,4 +61,6 @@ verificarStatus(task: any): string {
   }
 
   return 'pendente';
-}}
+}
+
+}

@@ -1,11 +1,9 @@
-<app-has-no-task></app-has-no-task>
+@if (tasks.length === 0) {
+  <app-has-no-task></app-has-no-task>
+}
 
-<div *ngFor="let task of tasks; let i = index">
-
-  <div *ngIf="verificarStatus(task) === 'atrasado'">
-    <h3>{{ task.titulo }}</h3>
+@if (tasks.length > 0) {
+  <div *ngFor="let task of tasks; let i = index">
+    <app-task-item *ngIf="verificarStatus(task) === 'atrasado'" [task]="task"></app-task-item>
   </div>
-
-
-
-</div>
+}
