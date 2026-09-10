@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HasNoTask } from "../../../components/has-no-task/has-no-task";
 
@@ -8,11 +8,4 @@ import { HasNoTask } from "../../../components/has-no-task/has-no-task";
   templateUrl: './behind-schedule.html',
   styleUrl: './behind-schedule.scss',
 })
-export class BehindSchedule {
-    @Input() tasks: any[] = [];
-
-  verificarStatus(task: any): string {
-    // Reutilize aqui a implementação existente no componente principal
-    return task.status;
-  }
-}
+export class BehindSchedule {}
