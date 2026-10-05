@@ -1,8 +1,10 @@
-<div class="card">
-
-  <h3>{{task.title}}</h3>
-
-  <p>End: {{task.endDate}}</p>
-
-
-</div>
+<button
+  type="button"
+  class="card"
+  [class.selected]="selected"
+  [attr.aria-pressed]="selected"
+  (click)="toggleSelection()"
+>
+  <h3>{{ task.title }}</h3>
+  <p>End: {{ task.endDate }}</p>
+</button>
